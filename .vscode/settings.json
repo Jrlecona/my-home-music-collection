@@ -1,0 +1,8 @@
+{
+    "workbench.colorTheme": "Dobri Next -C05- Electron",
+    "workbench.iconTheme": "material-icon-theme",
+    "[javascript]":{
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.wordWrap": "wordWrapColumn"
+}
