@@ -16,6 +16,7 @@ class ArtistRoutes {
         this.router.post('/', artistsController_1.default.createArtist);
         this.router.put('/:id', artistsController_1.default.updateArtist);
         this.router.delete('/:id', artistsController_1.default.deleteArtist);
+        this.router.post('/find', artistsController_1.default.findArtist);
     }
 }
 const artistRoutes = new ArtistRoutes();

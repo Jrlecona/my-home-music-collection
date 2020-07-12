@@ -67,6 +67,18 @@ class ArtistController {
 
      }
 
+     async findArtist(req: Request, res: Response) : Promise<Response>  {
+        try{
+            const searchFields = req.body;
+            const artistFinded =  await Artist.find(searchFields);
+            return res.status(200).json({data: artistFinded});
+        }
+        catch(e){
+            console.log(e)
+            return res.status(500).json('Something goes wrong.');
+        }
+     }
+
 }
 
 const artistController = new ArtistController();

@@ -16,6 +16,8 @@ import ArtistController from '../controllers/artistsController'
         this.router.post('/', ArtistController.createArtist);
         this.router.put('/:id', ArtistController.updateArtist);
         this.router.delete('/:id', ArtistController.deleteArtist);
+        this.router.post('/find', ArtistController.findArtist);
+        
      }
  }
 

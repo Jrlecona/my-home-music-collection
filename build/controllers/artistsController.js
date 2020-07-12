@@ -79,6 +79,19 @@ class ArtistController {
             }
         });
     }
+    findArtist(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const searchFields = req.body;
+                const artistFinded = yield ArtistsModel_1.default.find(searchFields);
+                return res.status(200).json({ data: artistFinded });
+            }
+            catch (e) {
+                console.log(e);
+                return res.status(500).json('Something goes wrong.');
+            }
+        });
+    }
 }
 const artistController = new ArtistController();
 exports.default = artistController;

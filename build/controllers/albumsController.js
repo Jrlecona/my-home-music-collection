@@ -79,6 +79,19 @@ class AlbumController {
             }
         });
     }
+    findAlbum(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const searchFields = req.body;
+                const albumFinded = yield AlbumsModel_1.default.find(searchFields);
+                return res.status(200).json({ data: albumFinded });
+            }
+            catch (e) {
+                console.log(e);
+                return res.status(500).json('Something goes wrong.');
+            }
+        });
+    }
 }
 const albumController = new AlbumController();
 exports.default = albumController;

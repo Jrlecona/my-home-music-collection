@@ -16,6 +16,7 @@ import AlbumController from '../controllers/albumsController'
         this.router.post('/', AlbumController.createAlbum);
         this.router.put('/:id', AlbumController.updateAlbum);
         this.router.delete('/:id', AlbumController.deleteAlbum);
+        this.router.post('/find', AlbumController.findAlbum);
      }
  }
 

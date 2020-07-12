@@ -67,6 +67,18 @@ class AlbumController {
 
      }
 
+     async findAlbum(req: Request, res: Response) : Promise<Response>  {
+        try{
+            const searchFields = req.body;
+            const albumFinded =  await Album.find(searchFields);
+            return res.status(200).json({data: albumFinded});
+        }
+        catch(e){
+            console.log(e)
+            return res.status(500).json('Something goes wrong.');
+        }
+     }
+
 }
 
 const albumController = new AlbumController();
