@@ -88,7 +88,7 @@ class AlbumController {
             }
             catch (e) {
                 console.log(e);
-                return res.status(500).json('Something goes wrong.');
+                return res.status(500).json({ Error: e });
             }
         });
     }
